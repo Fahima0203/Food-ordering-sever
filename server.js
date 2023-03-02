@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const fs = require('fs')
 const ImageModell = require("./Models/nodeModel")
 const UserModel = require("./Models/signupModel")
-// require('dotenv').config();
+require('dotenv').config();
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -64,11 +64,11 @@ app.post("/uploadSignup", (req, res) => {
   res.send('Signup data is saved')
 });
 
-// app.listen(process.env.PORT || 5001, ()=>{
-//     console.log("Express server is running on port 5001");
-// });
-app.listen(5001, () => {
-  console.log("Express server is running on port 5001");
+app.listen(process.env.PORT || 5001, ()=>{
+    console.log("Express server is running on port 5001");
 });
+// app.listen(5001, () => {
+//   console.log("Express server is running on port 5001");
+// });
 
 
